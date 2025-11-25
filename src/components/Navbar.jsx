@@ -1,5 +1,7 @@
 import { Search, ShoppingCart } from "lucide-react";
 
+import { navLinks } from "../constants";
+
 const Navbar = () => {
     return (
       <header>
@@ -7,14 +9,7 @@ const Navbar = () => {
           <img src="./logo.svg" alt="Apple Logo" />
 
           <ul>
-            {[
-              { label: "Store" },
-              { label: "Mac" },
-              { label: "iPad" },
-              { label: "iPhone" },
-              { label: "Watch" },
-              { label: "Vision" },
-            ].map(({ label }) => (
+            {navLinks.map(({ label }) => (
               <li key={label}>
                 <a href={label}>{label}</a>
               </li>
